@@ -9,23 +9,31 @@ namespace RefandOut
         //TODO Call the method in the main and make sure the method changes the number of a initialized variable and returns a bool.
         public static bool SubtractHealth(ref int x)
         {
-      
+            x -= +5;
+            return true;
         }
 
         //TODO create method that uses the out keyword. Call the method in the main.
         
 
-        public int Sum(int x, int y, out  bool even)
+        public static int Sum(int x, int y, out  bool even)
         {
-            //use this metho or make your own.
-
+            int sum = x + y;
+            even = (sum % 2 == 0);
+            return sum;
         }
-
+            
 
         static void Main(string[] args)
         {
+            int myValue = 25;
+            bool answer = SubtractHealth(ref myValue);
 
-    
+            bool even;
+            int mySum = Sum(3, 4, out even);
+
+
+
         }
 
     }
